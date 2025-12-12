@@ -1,0 +1,78 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #000;
+    color: #fff;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#jbButton {
+    padding: 18px 36px;        
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #000;
+    border: 3px solid #fff;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.4s, transform 0.2s;
+    max-width: 90vw;           
+    margin-bottom: 32px;
+}
+
+#jbButton.clicked {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 0 18px 6px rgba(255,255,255,0.7),
+                0 0 30px 12px rgba(255,255,255,0.35);
+    border-radius: 18px;
+    transform: scale(1.05);
+}
+
+#jbButton.disabled {
+    background-color: #000;
+    color: #777;
+    border-color: #777;
+    cursor: not-allowed;
+}
+
+.info-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: text-shadow 0.3s;
+}
+
+.info-link:hover, .info-link:active {
+    text-shadow: 0 0 16px rgba(255,255,255,0.9),
+                 0 0 24px rgba(255,255,255,0.6);
+}
+
+
+@media (min-width: 769px) {
+    .collapser {
+        width: 600px;
+        font-size: 1.3rem;
+        padding: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .collapser {
+        width: 95%;
+        font-size: 1rem;
+        padding: 16px;
+    }
+}
